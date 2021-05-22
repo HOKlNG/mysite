@@ -8,3 +8,10 @@ from django.views.generic.edit import FormView, View
 
 def index(request):
     return render(request, 'index.html')
+
+
+def blog(request):
+    return render(request, 'blog.html')
+
+def contact(request):
+    return render(request, 'contact.html')

@@ -1,10 +1,224 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DirectoryListing</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+
+	<!-- CSS here -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animated-headline.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/themify-icons.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/nice-select.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
+
+    {% block header %}
+
+    {% endblock %}
 <body>
-$END$
-</body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'img/logo/loder.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="/main/"><img src="{% static 'img/logo/hlogo.png' %}" alt=""></a>
+                        </div>
+                        <!-- Main-menu -->
+                        <div class="main-menu f-right d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="/main/">Home</a></li>
+<!--                                    <li><a href="listing.html">Catagories</a></li>-->
+                                    <li><a href="https://github.com/HOKlNG/mysite">Git</a>
+<!--                                        <ul class="submenu">-->
+<!--                                            <li><a href="directory_details.html">listing Details</a></li>-->
+<!--                                            <li><a href="listing.html">Catagories</a></li>-->
+<!--                                        </ul>-->
+                                    </li>
+                                    <li><a href="blog">Blog</a>
+                                        <ul class="submenu">
+                                            <li><a href="blog">Blog</a></li>
+                                            <li><a href="blog_details.html">Blog Details</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Header-btn -->
+                        <div class="header-btns d-none d-lg-block f-right">
+                            <a href="#" class="mr-40"><i class="ti-user"></i> Log in</a>
+                            <a href="contact" class="btn">Contact</a>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+    {% block contents %}
+    {% csrf_token %}
+
+    {% endblock %}
+        <!--? Want To work 02-->
+        <section class="wantToWork-area">
+            <div class="container">
+                <div class="wants-wrapper w-padding2">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-8 col-lg-8 col-md-7">
+                            <div class="wantToWork-caption wantToWork-caption2">
+                                <img src="{% static 'img/logo/logo2_footer.png' %}" alt="" class="mb-20">
+                                <p>Users and submit their own items. You can create different packages and by connecting with your
+                                    PayPal or Stripe account charge users for registration to your directory portal.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-5">
+                            <div class="footer-social f-right sm-left">
+<!--                                <a href="#"><i class="fab fa-twitter"></i></a>-->
+                                <a href="https://www.facebook.com/profile.php?id=100002376155218"><i class="fab fa-facebook-f"></i></a>
+<!--                                <a href="#"><i class="fab fa-pinterest-p"></i></a>-->
+                                <a href="https://www.instagram.com/hhoklng/"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Want To work End -->
+        <!--? Want To work 01-->
+        <section class="wantToWork-area">
+            <div class="container">
+                <div class="wants-wrapper">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-7 col-lg-9 col-md-8">
+                            <div class="wantToWork-caption wantToWork-caption2">
+                                <div class="main-menu2">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="/main/">Home</a></li>
+                                            <li><a href="https://github.com/HOKlNG/mysite">Git</a></li>
+                                            <li><a href="blog">Blog</a></li>
+                                            <li><a href="contact">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4">
+                            <a href="contact" class="btn f-right sm-left">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Want To work End -->
+    </main>
+    <footer>
+        <div class="footer-wrapper pt-30">
+            <!-- footer-bottom -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-xl-10 col-lg-9 ">
+                                <div class="footer-copy-right">
+                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script type="text/javascript" src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script type="text/javascript" src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script type="text/javascript" src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/animated.headline.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+
+    <!-- Date Picker -->
+    <script type="text/javascript" src="{% static 'js/gijgo.min.js' %}"></script>
+    <!-- Nice-select, sticky -->
+    <script type="text/javascript" src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.sticky.js' %}"></script>
+    <!-- Progress -->
+    <script type="text/javascript" src="{% static 'js/jquery.barfiller.js' %}"></script>
+
+    <!-- counter , waypoint,Hover Direction -->
+    <script type="text/javascript" src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/waypoints.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/hover-direction-snake.min.js' %}"></script>
+
+    <!-- contact js -->
+    <script type="text/javascript" src="{% static 'js/contact.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.form.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/mail-script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+
+
+    </body>
 </html>
